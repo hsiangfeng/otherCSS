@@ -10,7 +10,7 @@ https://hsiangfeng.github.io/otherCSS/Calc.html
 https://hsiangfeng.github.io/otherCSS/js.html  
 ## CSS計算混變數:
 https://hsiangfeng.github.io/otherCSS/variable+Calc.html  
-## 2D瘋狂旋轉:
+## 2D角度控制:
 https://hsiangfeng.github.io/otherCSS/Transform2D.html  
 ## 3D無限旋轉:
 https://hsiangfeng.github.io/otherCSS/Transform3D.html  
