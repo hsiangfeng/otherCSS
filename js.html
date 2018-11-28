@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>套用JS控制顏色</title>
+        <style>
+            :root {
+                --r: 0;
+                --g: 0;
+                --b: 0;
+            }
+
+            .box {
+                height: 100px;
+                width: 100px;
+                background-color: rgb(var(--r), var(--g), var(--g));
+                transition: background-color .5s;
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type="range" class="range" min="0" max="100">
+        <div class="box"></div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            function getRGB() {
+                color = Math.floor(Math.random() * 156);
+                return color;
+            }
+            $(document).ready(function () {
+                const root = document.documentElement;
+                $('.box').on('click', function () {
+                    root.style.setProperty('--r', getRGB())
+                    root.style.setProperty('--g', getRGB())
+                    root.style.setProperty('--b', getRGB())
+                });
+                $('.range').on('click', function () {
+                    var value = $(this).val();
+                    console.log(value);
+                    root.style.setProperty('--r', value - 6)
+                    root.style.setProperty('--g', value - 1)
+                    root.style.setProperty('--b', value - 5)
+                });
+            });
+        </script>
+    </body>
+
+</html>

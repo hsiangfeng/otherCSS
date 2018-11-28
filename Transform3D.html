@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Transform3D</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+
+            }
+
+            .text {
+                background-color: red;
+                transform-style: preserve-3d;
+                transform: rotateY(150deg);
+                margin: 10px;
+                animation: clockRotate 0.5s infinite linear;
+            }
+
+            .perspective {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                perspective-origin: 50% 0;
+                perspective: 500px;
+            }
+
+            @-webkit-keyframes clockRotate {
+                from {
+                    transform: rotate(0deg);
+                }
+                /* to {
+                    transform: rotate(360deg);
+                } */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="perspective">
+            <div class="text box"></div>
+            <div class="text box"></div>
+            <div class="text box"></div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>套用JS控制顏色</title>
+        <style>
+            :root {
+                --r: 255;
+                --g: 255;
+                --b: 255;
+                --stime:3s;
+            }
+            .box {
+                height: 100px;
+                width: 100px;
+                background-color: rgb(var(--r), var(--g), var(--g));
+                transition: background-color .5s;
+                transform-style: preserve-3d;
+                transform: rotateY(150deg);
+                animation: clockRotate var(--stime) infinite linear;
+                color:red;
+                font-weight: bold;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+            .perspective {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                perspective-origin: 50% 0;
+                perspective: 500px;
+            }
+            @keyframes clockRotate {
+                from {
+                    transform: rotate(0deg);
+                }
+                 to {
+                    transform: rotate(360deg);
+                 }
+            }
+        </style>
+    </head>
+
+    <body>
+        控制顏色:<input type="range" class="range" min="0" max="100"><br>
+        控制轉速:<input type="range" class="animationTime" min="0.1" max="10.0">
+        <div class="perspective">
+            <div class="box">直接點我也可以變色</div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            function getRGB() {
+                color = Math.floor(Math.random() * 156);
+                return color;
+            }
+            $(document).ready(function () {
+                const root = document.documentElement;
+                $('.box').on('click', function () {
+                    root.style.setProperty('--r', getRGB())
+                    root.style.setProperty('--g', getRGB())
+                    root.style.setProperty('--b', getRGB())
+                });
+                $('.range').on('click', function () {
+                    var value = $(this).val();
+                    console.log(value);
+                    root.style.setProperty('--r', value)
+                    root.style.setProperty('--g', value)
+                    root.style.setProperty('--b', value)
+                });
+                $('.animationTime').on('click', function () {
+                    var value = $(this).val();
+                    console.log(value);
+                    root.style.setProperty('--stime', value + 's')
+                });
+            });
+        </script>
+    </body>
+
+</html>
