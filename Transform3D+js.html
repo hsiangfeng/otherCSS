@@ -36,12 +36,26 @@
                 perspective: 500px;
             }
             @keyframes clockRotate {
-                from {
-                    transform: rotate(0deg);
+                0% {
+                    transform: rotate(0deg) ;
+                    background-color: black
                 }
-                 to {
-                    transform: rotate(360deg);
+                25% {
+                    transform: rotateX(45deg);
+                    background-color:blue;
+                }
+                50% {
+                    transform: rotate(90deg);
+                     background-color: yellow;
                  }
+                75% {
+                    transform: rotateY(180deg);
+                    background-color: red;
+                 }
+                100% {
+                    transform: rotate(360deg);
+                    background-color: green;
+                }
             }
         </style>
     </head>
