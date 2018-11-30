@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>各種hover</title>
+        <style>
+            :root {
+                --block-Transparent: 0, 0, 0, 0.7;
+                --yellow-Transparent: 255, 255, 0, 0.7;
+                --transitionTime: all 3s;
+                --stime:4s;
+            }
+
+            .box,
+            .box2,
+            .boxImg,
+            .box-img,
+            .boxImg2 {
+                width: 200px;
+                height: 200px;
+            }
+
+            .box {
+                background-color: rgba(var(--block-Transparent));
+                transition: var(--transitionTime);
+            }
+
+            .box:hover {
+                background-color: rgba(var(--yellow-Transparent));
+            }
+
+            .box2 {
+                background-color: rgba(var(--yellow-Transparent));
+                transition: var(--transitionTime);
+            }
+
+            .box2:hover {
+                background-color: rgba(var(--block-Transparent));
+            }
+
+            .boxImg,
+            .boxImg2 {
+                overflow: hidden;
+            }
+
+            .box-img {
+                background-image: url('https://images.unsplash.com/photo-1543545342-eeb71c9a7407?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf15f8e35cfcf5ceb4adc69aecca59ff&auto=format&fit=crop&w=600&q=60');
+                background-color: rgba(var(--yellow-Transparent));
+                background-position: center center;
+                background-size: cover;
+            }
+
+            .box-img:hover {
+                background-color: rgba(var(--block-Transparent));
+                background-size: 500px 500px;
+            }
+
+            .img {
+                width: 100%;
+                height: auto;
+            }
+
+            .imgbox {
+                width: 300px;
+                transition: var(--transitionTime);
+
+            }
+
+            .boxImg2 {
+                display: inline-block;
+                transition: var(--transitionTime);
+                animation: clockRotate var(--stime) infinite linear;
+            }
+
+            .boxImg2:hover {
+                margin-left: 10px;
+            }
+
+            @keyframes clockRotate {
+                0% {
+                    margin-left: 0%;
+                    transform: scale(1) rotate(0deg) skewX(0deg);
+                }
+                10% {
+                    margin-left: 20%;
+                    transform: scale(1) rotate(36deg) skewX(36eg);
+                }
+                20% {
+                    margin-left: 40%;
+                    transform: scale(1) rotate(72deg) skewX(72eg);
+                }
+                30% {
+                    margin-left: 60%;
+                    transform: scale(1) rotate(108deg) skewX(108deg);
+                }
+                40% {
+                    margin-left: 80%;
+                    transform: scale(1) rotate(144deg) skewX(144deg);
+                }
+                50% {
+                    margin-left: 100%;
+                    transform: scale(1) rotate(180deg) skewX(180deg);
+                }
+                60% {
+                    margin-left: 80%;
+                    transform: scale(1) rotate(144deg) skewX(144deg);
+                }
+                70% {
+                    margin-left: 60%;
+                    transform: scale(1) rotate(108deg) skewX(108deg);
+                }
+                80% {
+                    margin-left: 40%;
+                    transform: scale(1) rotate(72deg) skewX(72deg);
+                }
+                90% {
+                    margin-left: 20%;
+                    transform: scale(1) rotate(36deg) skewX(36eg);
+                }
+                100% {
+                    margin-left: 0%;
+                    transform: scale(1) rotate(0deg) skewX(0deg);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="boxImg">
+            <div class="box-img"></div>
+        </div>
+        <div class="boxImg2">
+            <img class="imgbox" src="https://images.unsplash.com/photo-1543518587-ce736d2cdd00?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=261a357d1112b97faeaf4d7ca564c09c&auto=format&fit=crop&w=600&q=60"
+                alt="" srcset="">
+        </div>
+    </body>
+
+</html>
