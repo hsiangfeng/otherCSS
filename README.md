@@ -16,6 +16,8 @@ https://hsiangfeng.github.io/otherCSS/Transform2D.html
 https://hsiangfeng.github.io/otherCSS/Transform3D.html  
 ## 3D特效混和JS控制:
 https://hsiangfeng.github.io/otherCSS/Transform3D+js.html  
+## loadingPage
+https://hsiangfeng.github.io/otherCSS/loadingPage.html
 
-參考六角學院共筆文件製作
+CSS變數方面參考六角學院共筆文件製作
 https://paper.dropbox.com/doc/1128-CSS-IgwMU2S2IIpV1bgmZOXBz
