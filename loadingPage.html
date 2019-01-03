@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <style>
+        /* loading */
+        .loading {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 90vh;
+        }
+        /* borderLoading */
+        .borderLoading {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgb(223, 73, 73);
+            transition: all 2s;
+        }
+        .borderLoading.active {
+            position: absolute;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: 1px solid transparent;
+            border-top-color: rgb(223, 73, 73);
+            border-right-color: rgb(223, 73, 73);
+            border-bottom-color: rgb(223, 73, 73);
+            border-radius: 50%;
+            animation: loading 2s infinite linear;
+        }
+        .borderLoading::before {
+            content: "";
+            border-radius: 50%;
+            border: 1px solid transparent;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            transition: all 2s;
+        }
+        .borderLoading.active::before {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            right: 25px;
+            bottom: 25px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            border-top-color: rgb(223, 73, 73);
+            border-left-color: rgb(223, 73, 73);
+            border-bottom-color: rgb(223, 73, 73);
+            animation: loading 4s infinite linear;
+        }
+        /* loadingTop */
+        .loadingTop.active {
+            border: 1px solid rgb(223, 73, 73);
+            position: absolute;
+            width: 200px;
+            top: 10px;
+            right: 0;
+            left: 0;
+            animation: loadingtop 2s infinite linear;
+        }
+        /* loadingBottom */
+        .loadingBottom.active {
+            border: 1px solid rgb(223, 73, 73);
+            position: absolute;
+            width: 200px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            animation: loadingBottom 2s infinite linear;
+        }
+        .loadingBottom.active::after {
+            content: "";
+            border: 1px solid rgb(223, 73, 73);
+            position: absolute;
+            width: 200px;
+            bottom: 30px;
+            right: 0;
+            left: 0;
+            animation: loadingBottom 1s infinite linear;
+        }
+        /* loadingBottomtwo */
+        .loadingBottomtwo.active {
+            border: 1px solid rgb(223, 73, 73);
+            position: absolute;
+            width: 200px;
+            bottom: 55px;
+            right: 0;
+            left: 0;
+            animation: loadingBottom 4s infinite linear;
+        }
+        .loadingBottomtwo.active::after {
+            content: "";
+            border: 1px solid rgb(223, 73, 73);
+            position: absolute;
+            width: 200px;
+            bottom: 15px;
+            right: 0;
+            left: 0;
+            animation: loadingBottom 2s infinite linear;
+        }
+        
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loadingtop {
+            0% {
+                right: 100%;
+                left: 0%
+            }
+
+            50% {
+                right: 0%;
+                left: 100%;
+            }
+
+            100% {
+                right: 100%;
+                left: 0%
+            }
+        }
+
+        @keyframes loadingBottom {
+            0% {
+                right: 100%;
+                left: 0%
+            }
+
+            50% {
+                right: 0%;
+                left: 100%;
+            }
+
+            100% {
+                right: 100%;
+                left: 0%
+            }
+        }
+    </style>
+
+    <body>
+        <div class="wrap">
+            <div class="loading">
+                <div class="loadingTop"></div>
+                <div class="borderLoading"></div>
+                <div class="loadingBottom"></div>
+                <div class="loadingBottomtwo"></div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const borderLoading = document.querySelector('.borderLoading');
+        const loadingTop = document.querySelector('.loadingTop');
+        const loadingBottom = document.querySelector('.loadingBottom');
+        const loadingBottomtwo = document.querySelector('.loadingBottomtwo');
+
+        window.onload = function () {
+            setTimeout("startFu()", 500);
+        }
+
+        function startFu() {
+            borderLoading.classList.add('active');
+            setTimeout("startFuborder()", 1000);
+        }
+        function startFuborder() {
+            loadingTop.classList.add('active');
+            loadingBottom.classList.add('active');
+            loadingBottomtwo.classList.add('active');
+        }
+    </script>
+
+</html>
