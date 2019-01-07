@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            body {
+                overflow: hidden;
+            }
+
+            .load-page {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 9999;
+                background-color: #eaf0ed;
+            }
+
+            .page-logo {
+                position: absolute;
+                top: 30%;
+                right: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: loading 600ms ease 375ms infinite alternate;
+            }
+
+            .page-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -15px 0 0 -150px;
+                width: 345px;
+                height: 30px;
+            }
+
+            .logo {
+                position: absolute;
+                right: 0;
+                bottom: 30%;
+                left: 0%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: loadingBottom 1s infinite linear;
+                animation-iteration-count:1;
+            }
+
+            .page-text>div {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                color: #ffffff;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                font-family: Verdana;
+            }
+
+            .preloader-box:nth-child(1) {
+                margin-right: 15px;
+                background: #3f5d45;
+                animation: movement 600ms ease 0ms infinite alternate;
+            }
+
+            .preloader-box:nth-child(2) {
+                margin-right: 15px;
+                background: #3f5d45;
+                animation: movement 600ms ease 75ms infinite alternate;
+            }
+
+            .preloader-box:nth-child(3) {
+                margin-right: 15px;
+                background: #3f5d45;
+                animation: movement 600ms ease 150ms infinite alternate;
+            }
+
+            .preloader-box:nth-child(4) {
+                margin-right: 15px;
+                background: #3f5d45;
+                animation: movement 600ms ease 225ms infinite alternate;
+            }
+
+            .preloader-box:nth-child(5) {
+                margin-right: 15px;
+                background: #3f5d45;
+                animation: movement 600ms ease 300ms infinite alternate;
+            }
+
+            .preloader-box:nth-child(6) {
+                margin-right: 15px;
+                background: #3f5d45;
+                animation: movement 600ms ease 375ms infinite alternate;
+            }
+
+            .preloader-box:nth-child(7) {
+                margin-right: 15px;
+                background: #3f5d45;
+                animation: movement 600ms ease 425ms infinite alternate;
+            }
+
+            @keyframes loading {
+                form {
+                    top: 30%;
+                }
+
+                to {
+                    top: 20%;
+                }
+            }
+
+            @keyframes movement {
+                from {
+                    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                    transform: scale(1.0) translateY(0px) rotateX(0deg);
+                }
+
+                to {
+                    background: #ffe180;
+                    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.4);
+                    transform: scale(1.5) translateY(-25px) rotateX(45deg);
+                }
+            }
+
+            @keyframes loadingBottom {
+                0% {
+                    left: -200%;
+                }
+
+                100% {
+                    left: 0%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="load-page" id="load-page">
+            <div class="page-logo"><img src="https://hsiangfeng.github.io/Pug-Sweetaste/images/logo-dark.svg" alt=""
+                    srcset="" height="50px" width="50px" /></div>
+            <div class="page-text">
+                <div class="preloader-box">L</div>
+                <div class="preloader-box">O</div>
+                <div class="preloader-box">A</div>
+                <div class="preloader-box">D</div>
+                <div class="preloader-box">.</div>
+                <div class="preloader-box">.</div>
+                <div class="preloader-box">.</div>
+            </div>
+            <div class="logo"><img src="https://hsiangfeng.github.io/Pug-Sweetaste/images/logo-all-dark.svg" alt=""
+                    srcset="" width="215px" /></div>
+        </div>
+    </body>
+
+</html>
