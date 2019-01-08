@@ -18,6 +18,8 @@ https://hsiangfeng.github.io/otherCSS/Transform3D.html
 https://hsiangfeng.github.io/otherCSS/Transform3D+js.html  
 ## loadingPage
 https://hsiangfeng.github.io/otherCSS/loadingPage.html
+## logoPage (Sweet)
+https://hsiangfeng.github.io/otherCSS/logoPage.html
 
 CSS變數方面參考六角學院共筆文件製作
 https://paper.dropbox.com/doc/1128-CSS-IgwMU2S2IIpV1bgmZOXBz
