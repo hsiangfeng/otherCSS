@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            #loading-page {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100vh;
+                background-color: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            #loadingimg {
+                position: relative;
+                left: 0px;
+                top: -100px;
+                animation: bouncelLogo 2s ease;
+            }
+
+            #dtkhLogo {
+                position: relative;
+                display: none;
+                height: auto;
+                animation: bouncelLogoTwo 600ms infinite alternate;
+            }
+
+            @keyframes bouncelLogo {
+                0% {
+                    top: -200px;
+                    left: -200px;
+                    transform: rotate(0deg);
+
+                }
+
+                50% {
+                    top: 0px;
+                    left: 0px;
+                    transform: rotate(360deg);
+                }
+
+                100% {
+                    top: -100px;
+                }
+            }
+
+            @keyframes bouncelLogoTwo {
+                from {
+                    transform: scale(1.0) translateY(0px) rotateX(0deg);
+                }
+
+                to {
+                    transform: translateY(-25px);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="loading-page">
+            <img src="https://fakeimg.pl/150/" id="loadingimg" width="150px">
+            <img src="https://fakeimg.pl/300/" id="dtkhLogo" alt="" width="300px">
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+            setTimeout('loadingimg()', 2000);
+                // window.onload = function(){
+                //     $('#loading-page').fadeOut(1500);
+                // }
+                function loadingimg() {
+                    $('#loadingimg').fadeOut(500);
+                    setTimeout('dtkjLogo()', 500);
+                }
+                function dtkjLogo() {
+                    $('#dtkhLogo').fadeIn(1000);
+                }
+        </script>
+    </body>
+
+</html>
