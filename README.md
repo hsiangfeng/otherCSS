@@ -20,6 +20,7 @@ https://hsiangfeng.github.io/otherCSS/Transform3D+js.html
 https://hsiangfeng.github.io/otherCSS/loadingPage.html
 ## logoPage (Sweet)
 https://hsiangfeng.github.io/otherCSS/logoPage.html
-
+#bounceLoading
+https://hsiangfeng.github.io/otherCSS/bounceLoading.html
 CSS變數方面參考六角學院共筆文件製作
 https://paper.dropbox.com/doc/1128-CSS-IgwMU2S2IIpV1bgmZOXBz
