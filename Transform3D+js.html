@@ -11,12 +11,13 @@
                 --r: 255;
                 --g: 255;
                 --b: 255;
+                --o:1;
                 --stime:3s;
             }
             .box {
                 height:300px;
                 width: 300px;
-                background-color: rgb(var(--r), var(--g), var(--g));
+                background-color: rgba(var(--r), var(--g), var(--b),var(--o));
                 transition: background-color .5s;
                 transform-style: preserve-3d;
                 transform: rotateY(150deg);
@@ -85,9 +86,9 @@
                 $('.range').on('click', function () {
                     var value = $(this).val();
                     console.log(value);
-                    root.style.setProperty('--r', value)
-                    root.style.setProperty('--g', value)
-                    root.style.setProperty('--b', value)
+                    root.style.setProperty('--r', value - 10)
+                    root.style.setProperty('--g', value - 5)
+                    root.style.setProperty('--b', value - 6)
                 });
                 $('.animationTime').on('click', function () {
                     var value = $(this).val();

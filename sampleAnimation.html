@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <style>
+        :root {
+            --blue: #007bff;
+            --indigo: #6610f2;
+            --purple: #6f42c1;
+            --pink: #e83e8c;
+            --red: #dc3545;
+            --orange: #fd7e14;
+            --yellow: #ffc107;
+            --green: #28a745;
+            --teal: #20c997;
+            --cyan: #17a2b8;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-dark: #343a40;
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --success: #28a745;
+            --info: #17a2b8;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --breakpoint-xs: 0;
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1200px;
+            --font-size-lg:24px;
+            --font-size-md:16px;
+            --font-size-sm:12px;
+            --bg-red:#dc3545;
+            --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+        body{
+            font-family: var(--font-family-monospace);
+            font-size:var(--font-size-md);
+        }
+        .box {
+            height: 50px;
+            width: 50px;
+            float: left;
+        }
+
+        .apps::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .box1 {
+            background-color: black;
+        }
+
+        .box2 {
+            background-color: aqua;
+        }
+
+        .box3 {
+            background-color: var(--danger);
+            transition: .2s;
+            animation: boxKeyFrames 2s infinite linear;
+        }
+        .p-size-lg{
+            background-color: var(--bg-red);
+            font-size: calc(var(--font-size-lg) + 10%);
+        }
+        .p-size-md{
+            font-size: var(--font-size-md);
+        }
+        .p-size-sm{
+            font-size: var(--font-size-sm);
+        }
+        .p-size{
+            background-color: var(--bg-red);
+            font-size:var(--font-size-lg);
+        }
+        @keyframes boxKeyFrames {
+            0% {
+                height: 50px;
+            }
+
+            50% {
+                height: 30px;
+            }
+
+            100% {
+                height: 50px;
+            }
+        }
+    </style>
+
+    <body>
+        <div class="app">
+            <p>這是一段話預設</p>
+            <p class="p-size-lg">這是一段話大</p>
+            <p class="p-size-lg">這是一段話大</p>
+            <p class="p-size-lg">這是一段話大</p>
+            <p class="p-size-lg">這是一段話大</p>
+            <p class="p-size-lg">這是一段話大</p>
+            <p class="p-size-md">這是一段話中</p>
+            <p class="p-size-sm">這是一段話小</p>
+            <p class="p-size">這是一段話小小大</p>
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+    </body>
+
+</html>
